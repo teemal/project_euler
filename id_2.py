@@ -3,17 +3,20 @@
 
 store_fib = []
 
-def fib(end_num):
-    x = 1
-    y = 2
-    store_fib.append(x)
-    store_fib.append(y)
+def fibonacci(n):
+    a = 0
+    b = 1
+    for i in range(0, n):
+        temp = a
+        a = b
+        b = temp + b
+    return a
 
-    if x >= end_num:
-        x = False
-    while (x != False):
-        adder = store_fib[len(store_fib)] + store_fib[len(store_fib - 1)]
-        store_fib.append(adder)
-        fib(end_num)
-
-fib(100)
+# Display the first 15 Fibonacci numbers.
+for c in range(0, 35):
+    fibber = fibonacci(c)
+    if fibber % 2 == 0 and fibber <= 4000000:
+        store_fib.append(fibber)
+    #print(fibonacci(c))
+print(store_fib)
+print(sum(store_fib))
