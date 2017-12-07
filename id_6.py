@@ -18,3 +18,10 @@ def square_of_sums(n):
     return power
 
 print(square_of_sums(100) - sum_of_squares(100))
+
+#jacked from comments VVV
+#sumsquare = sum([i**2 for i in range(101)])
+#squaresum = (sum(range(101)))**2
+#print(squaresum-sumsquare)
+
+#^much less verbose and more "pythonic"
