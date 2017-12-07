@@ -1,15 +1,19 @@
 #Taylor Mallory
 #project euler
-import math
+def prime_factors(n):
+    factors = []
+    d = 2
+    while n > 1:
+        while n % d == 0:
+            factors.append(d)
+            n /= d
+        d = d + 1
+        if d*d > n:
+            if n > 1: factors.append(n)
+            break
+    return factors
 
-def is_it_prime(n):
-        for i in range(2, int(math.sqrt(n))):
-            if n % i == 0:
-                return False
-            return True
-#print(is_it_prime(13))
 
-def get_largest_prime_fac(m):
-    holder = m / 2
-    if is_it_prime(holder) != True:
-        
+pfs = prime_factors(600851475143)
+largest_prime_factor = max(pfs)
+print(largest_prime_factor)
