@@ -9,7 +9,14 @@ def is_it_prime(n):
     for i in range(2, int(math.sqrt(n))):
         if n%i == 0:
             return False
-        else:
+        elif n%i != 0:
             return True
 
-print(is_it_prime(9))
+for i in range(1,40):
+    print(is_it_prime(i))
+
+iterator = 10
+
+#def get_prime(n):
+#    for i in range(1,1000000):
+#        if is_it_prime(i) == True:
